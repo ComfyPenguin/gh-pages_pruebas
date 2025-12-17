@@ -20,6 +20,7 @@ mkdocs==1.6.1
 mkdocs-bootswatch==1.1
 mkdocs-get-deps==0.2.0
 mkdocs-glightbox==0.5.2
+-e git+ssh://git@github.com/ComfyPenguin/gh-pages_pruebas.git@8ad4a6d5e9ad5ea13169aab3a5bdae5cb258c3b1#egg=mkdocs_jarplantuml&subdirectory=plugins
 mkdocs-material==9.7.0
 mkdocs-material-extensions==1.3.1
 mkdocs-mermaid2-plugin==1.2.3

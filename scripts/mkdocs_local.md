@@ -1,4 +1,4 @@
-# Documentación local con MkDocs
+# Documentación para MkDocs
 
 Estos son los pasos mínimos para ejecutar y desarrollar el sitio MkDocs en local.
 
@@ -48,6 +48,27 @@ mkdocs serve
 - No subir el directorio `.venv/` al repositorio. Añadirlo a `.gitignore`.
 - El workflow de GitHub Actions usa `requirements.txt` para instalar dependencias antes de construir y desplegar.
 - Si los diagramas Mermaid aparecen como texto, asegúrate de no envolver todo el archivo Markdown en una valla de código y ejecutar `mkdocs build` para regenerar `site/`.
+
+## Instalar una dependencia y actualizar `requirements.txt`
+
+Si necesitas añadir una dependencia al proyecto, sigue uno de estos flujos según prefieras sobrescribir o añadir a `requirements.txt`:
+
+- Instalar y actualizar `requirements.txt` (sobrescribe con el estado actual del entorno):
+
+```bash
+# Instala el paquete dentro del venv del proyecto
+./.venv/bin/pip install <nombre-paquete>
+
+# Sobrescribe requirements.txt con las versiones actuales
+./.venv/bin/pip freeze > requirements.txt
+```
+
+- Instalar una versión concreta y fijarla:
+
+```bash
+./.venv/bin/pip install <nombre-paquete>==1.2.3
+./.venv/bin/pip freeze > requirements.txt
+```
 
 ## Script de automatización
 

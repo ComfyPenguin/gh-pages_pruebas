@@ -113,7 +113,63 @@ Lista de verificación:
 
 Inline code: `mkdocs build` — enfatizado *rápido* y **visible**.
 
+IMAGEN EMBEBIDA DE PLANTUML
+
 ![alternative text](https://www.plantuml.com/plantuml/png/XP9VJiCm3CRVSmehBuD9lG2QfZq0BxoWNQ3ocj16ofygSM7Jngau0XV3NQHsgrRsqjgVdS-_EjqamaYTis81pmRhY0xXPGl9kDPgQ34YT1vsDjH2Q4-63Y2xf6EIW0dE4Hm5mD8eU0BZ2LQhzxVrcgMYu8T7fxdmYR5gCBAW7HfxfLHH8sbL8h6iE2JZjFWUvxKXKPxNHxFpUfZoGdwzm60ZUysn2-h00kazSTPsEsjIynz55PpZE8FaP9wb1vsmt4EiWYUs79ZkxuMmpZGSp99CBc2ordBmoDbWT4udRWFlallwugqg3rZ0LbkiJF0wmOCFnF7lZuSgXgz5WeyG2B2DOMySAdmK-IywdOeY7FCLix74ZfeGfSX2hevxvuO6aynd9zNvu-D7SWU_QwsaEEStEzXSbSPB8JRQgyxPFm00)
+
+---
+
+CODIGO
+
+```plantuml
+@startuml
+' Diagrama ER simple para un blog
+
+entity "users" as users {
+  *id : int <<PK>>
+  --
+  name : varchar
+  email : varchar
+  created_at : datetime
+}
+
+entity "posts" as posts {
+  *id : int <<PK>>
+  user_id : int <<FK>>
+  --
+  title : varchar
+  body : text
+  published_at : datetime
+}
+
+entity "comments" as comments {
+  *id : int <<PK>>
+  post_id : int <<FK>>
+  user_id : int <<FK>>
+  --
+  content : text
+  created_at : datetime
+}
+
+entity "tags" as tags {
+  *id : int <<PK>>
+  name : varchar
+}
+
+entity "post_tags" as post_tags {
+  *post_id : int <<PK>><<FK>>
+  *tag_id  : int <<PK>><<FK>>
+}
+
+' Relaciones (notación crow's foot aproximada)
+users ||--o{ posts : "author"
+posts ||--o{ comments : "has"
+users ||--o{ comments : "author"
+posts ||--o{ post_tags : "tagged"
+tags  ||--o{ post_tags : "used_in"
+
+@enduml
+```
 
 <!-- imagen de ejemplo (ruta relativa) -->
 ![Placeholder de ejemplo](images/placeholder.png)
