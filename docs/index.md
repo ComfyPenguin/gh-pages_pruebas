@@ -113,7 +113,7 @@ Lista de verificación:
 
 Inline code: `mkdocs build` — enfatizado *rápido* y **visible**.
 
-![alternative text](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.github.com/plantuml/plantuml-server/master/src/main/webapp/resource/test2diagrams.txt)
+![alternative text](https://www.plantuml.com/plantuml/png/XP9VJiCm3CRVSmehBuD9lG2QfZq0BxoWNQ3ocj16ofygSM7Jngau0XV3NQHsgrRsqjgVdS-_EjqamaYTis81pmRhY0xXPGl9kDPgQ34YT1vsDjH2Q4-63Y2xf6EIW0dE4Hm5mD8eU0BZ2LQhzxVrcgMYu8T7fxdmYR5gCBAW7HfxfLHH8sbL8h6iE2JZjFWUvxKXKPxNHxFpUfZoGdwzm60ZUysn2-h00kazSTPsEsjIynz55PpZE8FaP9wb1vsmt4EiWYUs79ZkxuMmpZGSp99CBc2ordBmoDbWT4udRWFlallwugqg3rZ0LbkiJF0wmOCFnF7lZuSgXgz5WeyG2B2DOMySAdmK-IywdOeY7FCLix74ZfeGfSX2hevxvuO6aynd9zNvu-D7SWU_QwsaEEStEzXSbSPB8JRQgyxPFm00)
 
 <!-- imagen de ejemplo (ruta relativa) -->
 ![Placeholder de ejemplo](images/placeholder.png)
