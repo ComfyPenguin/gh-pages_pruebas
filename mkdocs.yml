@@ -71,5 +71,3 @@ plugins:
   - mkdocs_jarplantuml:
       plantuml_jar: plugins/plantuml-1.2025.10.jar
       output_format: png
-      output_dir: diagramas_UML
-
